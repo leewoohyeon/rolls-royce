@@ -1,0 +1,59 @@
+:root {
+  --swiper-theme-color: #fff;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-horizontal-gap: 12px;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Helvetica, 'Apple SD Gothic Neo', sans-serif;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid #fff;
+}
+
+// select dropdown 공통
+.select_box {
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.select_title {
+  position: relative;
+  user-select: none;
+  &::after {
+    content: "\e942";
+    font-family: xeicon !important;
+    font-weight: 400;
+    position: absolute;
+    right: 5px;
+  }
+  &.active::after { transform: rotate(180deg); }
+}
+.select_list {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  margin-top: 2px;
+  display: none;
+  &.open { display: block; }
+  li { border-bottom: 1px solid #333; }
+  li:last-child { border: none; }
+  li a {
+    display: block;
+    padding: 12px 10px;
+    background-color: #111;
+    text-align: left;
+    color: #555;
+    &:hover { color: #eee; }
+  }
+}

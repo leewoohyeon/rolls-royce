@@ -1,0 +1,121 @@
+// Section 1
+.sec_1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .swiper, .mySwiper { width: 100%; height: 100%; }
+  .swiper-slide {
+    position: relative;
+    video { width: 100%; height: 100%; object-fit: cover; }
+  }
+}
+.sec_1_bg.active {
+  position: fixed;
+  top: 0; right: 0; left: 0; bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.sec_1_brand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  h3 { font-size: 2.8em; text-align: center; line-height: 1.2em; margin-bottom: 50px; }
+  p { font-size: 1.15em; line-height: 28px; text-align: center; }
+}
+
+// Section 2
+.sec_2_brand {
+  margin: 100px 0;
+  h2 { font-size: 2.35em; text-align: center; margin-bottom: 80px; }
+  h3 { font-size: 1.8em; text-align: center; margin: 30px 0 50px; font-family: 'Raleway'; }
+  p { text-align: center; width: 35%; margin: 0 auto; line-height: 2em; font-family: 'Raleway'; }
+}
+.sec_2_brand_slide {
+  height: 300px;
+  img { width: 100%; height: 100%; object-fit: cover; }
+}
+.sec_2_brand_swiperbox {
+  .swiper-pagination { position: relative; padding: 50px 0; }
+}
+
+// Section 3
+.sec_3_brand_parallax {
+  min-height: 832px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.sec_3_brand_textbox {
+  background: radial-gradient(circle, rgba(32,10,50,1) 0%, rgba(9,1,20,1) 100%);
+  padding: 100px 0;
+  text-align: center;
+}
+
+// Section 4
+.sec_4_brand {
+  video { width: 100%; }
+}
+
+// Shared brand text
+.brand_textbox {
+  text-align: center;
+  padding: 80px 0;
+}
+.brand_title {
+  text-align: center;
+  font-size: 2.3em;
+  font-family: 'Raleway';
+  margin-bottom: 50px;
+}
+.brand_text {
+  width: 38%;
+  line-height: 2em;
+  margin: 0 auto;
+}
+
+// Section 5 (reuses phantom sec_6 styles)
+.sec_6_inner_phantom { width: 1596px; margin: 0 auto; }
+.sec_6_out_design_box { margin-bottom: 150px; }
+.sec_6_out_design { width: 1596px; margin: 0 auto; }
+.sec_6_contents_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  &:nth-of-type(2n) .sec_6_design_text { order: 1; }
+}
+.sec_6_design_img { width: 1064px; }
+.sec_6_design_text {
+  padding: 0 55px;
+  h3 { font-size: 2em; line-height: 2em; padding-bottom: 30px; }
+  p { font-size: 17px; line-height: 1.5em; width: 300px; font-weight: 200; }
+}
+
+.brand_more {
+  display: inline-block;
+  margin: 45px 0;
+  cursor: pointer;
+  &:hover { text-decoration: underline; }
+  &::after {
+    content: "\e93f";
+    font-family: xeicon !important;
+    transform: translateY(1px);
+    display: inline-block;
+  }
+}
+
+.sec_5_brand_parallax {
+  min-height: 598px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+// Section 6
+.sec_6_brand {
+  background: url('/img/brand/brand_sec_6_bgimg.jpeg') no-repeat center center;
+  background-size: cover;
+}
